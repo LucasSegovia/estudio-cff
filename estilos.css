@@ -1,0 +1,189 @@
+/* Estudio CFF — web pública. Una sola hoja, sin JavaScript. */
+
+:root {
+  --azul: #1E2847;
+  --azul-hondo: #161E36;
+  --acento: #0B6E86;
+  --acento-claro: #8FD0E0;
+  --fondo: #F4F7F9;
+  --texto: #10202F;
+  --texto-2: #4A5A69;
+  --borde: #DDE5EB;
+  --ancho: 1120px;
+  --radio: 18px;
+  /* margen izquierdo que alinea la portada (de borde a borde) con el resto */
+  --margen: max(24px, calc((100vw - var(--ancho)) / 2 + 24px));
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+body {
+  margin: 0;
+  font-family: "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--texto);
+  background: #fff;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, svg { display: block; }
+a { color: var(--acento); }
+:focus-visible { outline: 3px solid var(--acento); outline-offset: 3px; border-radius: 6px; }
+
+.contenedor { max-width: var(--ancho); margin: 0 auto; padding: 0 24px; }
+
+.saltar { position: absolute; left: -9999px; }
+.saltar:focus { left: 16px; top: 16px; z-index: 10; background: #fff; color: var(--azul); padding: 10px 14px; border-radius: 10px; }
+
+/* ------------------------------------------------------------ botones */
+
+.boton {
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  min-height: 56px; padding: 0 26px; border-radius: 14px;
+  font: inherit; font-size: 17px; font-weight: 800; text-decoration: none;
+  transition: transform .15s ease, background-color .15s ease, border-color .15s ease;
+}
+.boton:hover { transform: translateY(-1px); }
+.boton-blanco { background: #fff; color: var(--azul); }
+.boton-blanco:hover { background: #E9F1F6; }
+.boton-borde { color: #fff; border: 2px solid rgba(255, 255, 255, .35); }
+.boton-borde:hover { border-color: #fff; }
+.boton-azul { background: var(--azul); color: #fff; }
+.boton-azul:hover { background: var(--azul-hondo); }
+.boton-chico { min-height: 46px; padding: 0 20px; font-size: 15px; border-radius: 12px; }
+
+.etiqueta {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 13px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--acento-claro);
+}
+.etiqueta::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: currentColor; }
+.etiqueta-oscura { color: var(--acento); margin-bottom: 12px; }
+
+/* ------------------------------------------------------------ barra de arriba */
+
+.barra { background: #fff; border-bottom: 1px solid var(--borde); position: sticky; top: 0; z-index: 5; }
+.barra-adentro { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: 14px; padding-bottom: 14px; }
+.marca { display: flex; align-items: center; gap: 12px; color: var(--azul); text-decoration: none; }
+.marca img { width: 46px; height: 46px; }
+.marca-texto { display: flex; flex-direction: column; line-height: 1.2; }
+.marca-texto b { font-size: 18px; font-weight: 800; white-space: nowrap; }
+.marca-texto span { font-size: 13px; color: var(--texto-2); }
+.menu { display: flex; align-items: center; gap: 26px; font-size: 15px; font-weight: 700; }
+.menu a:not(.boton) { color: var(--texto); text-decoration: none; }
+.menu a:not(.boton):hover { color: var(--acento); }
+.menu .menu-clientes { color: var(--acento); }
+
+/* ------------------------------------------------------------ portada: azul con corte en diagonal */
+
+.portada {
+  display: grid; grid-template-columns: 1.2fr 1fr; min-height: 540px;
+  background-color: var(--azul);
+  /* cuadrícula fina: el toque "tecnológico", sin imágenes */
+  background-image:
+    linear-gradient(rgba(255, 255, 255, .05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, .05) 1px, transparent 1px);
+  background-size: 48px 48px;
+  color: #fff;
+}
+.portada-texto { padding: 80px 48px 88px var(--margen); display: flex; flex-direction: column; justify-content: center; }
+.portada h1 { margin: 18px 0 0; max-width: 620px; font-size: clamp(38px, 5vw, 58px); line-height: 1.06; font-weight: 800; letter-spacing: -.02em; }
+.portada h1 em { font-style: normal; color: var(--acento-claro); }
+.bajada { margin: 22px 0 0; max-width: 540px; font-size: 19px; color: #C9D6E3; }
+.acciones { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 34px; }
+
+/* lado derecho: lugar para la foto del equipo. Mientras no haya, el logo sobre un fondo claro. */
+.portada-foto {
+  clip-path: polygon(24% 0, 100% 0, 100% 100%, 0 100%);
+  background-color: #E8EEF3;
+  background-image:
+    linear-gradient(rgba(30, 40, 71, .06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(30, 40, 71, .06) 1px, transparent 1px);
+  background-size: 48px 48px;
+  display: flex; align-items: center; justify-content: center; padding-left: 12%;
+}
+.portada-foto > img:not(.portada-marca) { width: 100%; height: 100%; object-fit: cover; }
+.portada-marca { width: 180px; height: 180px; filter: drop-shadow(0 20px 40px rgba(30, 40, 71, .25)); }
+
+/* ------------------------------------------------------------ secciones */
+
+.seccion { padding: 88px 0; }
+.seccion-gris { background: var(--fondo); }
+.titulo { margin: 0; font-size: clamp(28px, 3.4vw, 40px); line-height: 1.15; font-weight: 800; letter-spacing: -.015em; color: var(--azul); }
+.titulo-claro { color: #fff; }
+.texto { margin: 18px 0 0; font-size: 19px; color: var(--texto-2); max-width: 560px; }
+
+/* Nosotros */
+.nosotros-grilla { display: grid; grid-template-columns: 1.2fr 1fr; gap: 56px; align-items: center; }
+.cifras { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
+.cifras li { display: flex; align-items: baseline; gap: 16px; padding: 20px 24px; border: 1px solid var(--borde); border-radius: var(--radio); }
+.cifras b { flex: none; min-width: 190px; font-size: 26px; font-weight: 800; color: var(--azul); letter-spacing: -.01em; }
+.cifras span { font-size: 16px; color: var(--texto-2); }
+
+/* Servicios */
+.servicios { list-style: none; margin: 36px 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--borde); border: 1px solid var(--borde); border-radius: var(--radio); overflow: hidden; }
+.servicios li { background: #fff; padding: 26px 24px; display: flex; flex-direction: column; gap: 6px; }
+.servicios svg { color: var(--acento); margin-bottom: 8px; }
+.servicios b { font-size: 18px; font-weight: 800; }
+.servicios span { font-size: 16px; color: var(--texto-2); }
+
+/* Autogestión: un servicio más, para los clientes */
+.clientes { margin-top: 20px; display: flex; align-items: center; gap: 18px; padding: 18px 20px; background: #fff; border: 1px solid var(--borde); border-radius: var(--radio); }
+.clientes-icono { flex: none; width: 48px; height: 48px; border-radius: 14px; background: #E5F1F5; color: var(--acento); display: flex; align-items: center; justify-content: center; }
+.clientes-texto { flex: 1; font-size: 16px; color: var(--texto-2); }
+.clientes-texto b { color: var(--texto); }
+
+/* Contacto (franja azul, como en la web actual) */
+.contacto { background: var(--azul); padding: 72px 0; }
+.datos { margin-top: 28px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.dato { display: flex; gap: 14px; align-items: center; padding: 18px; border-radius: var(--radio); background: rgba(255, 255, 255, .07); border: 1px solid rgba(255, 255, 255, .12); color: #fff; text-decoration: none; transition: background-color .15s ease; }
+a.dato:hover { background: rgba(255, 255, 255, .14); }
+.dato svg { color: var(--acento-claro); flex: none; }
+.dato small { display: block; font-size: 13px; color: #A9B7C7; }
+.dato b { font-size: 18px; font-weight: 800; }
+
+/* ------------------------------------------------------------ pie */
+
+.pie { background: var(--azul-hondo); color: #A9B7C7; font-size: 14px; }
+.pie .contenedor { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; padding-top: 26px; padding-bottom: 26px; }
+.pie nav { display: flex; gap: 20px; }
+.pie a { color: #fff; text-decoration: none; font-weight: 700; }
+.pie a:hover { text-decoration: underline; }
+
+/* WhatsApp siempre a mano, como en la web actual */
+.whatsapp-flotante {
+  position: fixed; right: 20px; bottom: 20px; z-index: 6;
+  width: 60px; height: 60px; border-radius: 50%;
+  background: #1F8A4C; color: #fff; display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 10px 24px rgba(16, 32, 47, .3);
+}
+.whatsapp-flotante:hover { background: #176B3B; }
+
+/* ------------------------------------------------------------ pantallas medianas y celular */
+
+@media (max-width: 900px) {
+  .portada { grid-template-columns: 1fr; min-height: 0; }
+  .portada-texto { padding: 56px 24px 64px; }
+  .portada-foto { display: none; }
+  .nosotros-grilla { grid-template-columns: 1fr; gap: 32px; }
+  .servicios { grid-template-columns: 1fr 1fr; }
+  .seccion { padding: 64px 0; }
+  .menu a:not(.boton):not(.menu-clientes) { display: none; }
+}
+@media (max-width: 600px) {
+  .marca-texto span { display: none; }
+  .menu { gap: 14px; }
+  .servicios { grid-template-columns: 1fr; }
+  .servicios li { display: grid; grid-template-columns: 28px 1fr; column-gap: 16px; row-gap: 2px; padding: 18px 20px; }
+  .servicios svg { grid-row: span 2; margin: 2px 0 0; }
+  .clientes { flex-wrap: wrap; }
+  .clientes .boton { width: 100%; }
+  .datos { grid-template-columns: 1fr; }
+  .acciones .boton { width: 100%; }
+  .cifras li { flex-direction: column; gap: 2px; }
+  .cifras b { min-width: 0; font-size: 22px; }
+  .pie .contenedor { padding-bottom: 96px; }
+}
