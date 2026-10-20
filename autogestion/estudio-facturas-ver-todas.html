@@ -1,0 +1,100 @@
+
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <meta name="theme-color" content="#1E2847">
+  <link rel="icon" type="image/svg+xml" href="static/marca/cff/logo-box.svg">
+  <link rel="apple-touch-icon" href="static/marca/cff/icono-apple-180.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="CFF">
+  <title>Facturas · Estudio CFF</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="static/estilos.css?v=1792457014">
+  <style>:root { --azul: #1E2847; }</style>
+</head>
+<body><div style="background:#FFF4D6;color:#6B4A00;font:700 15px/1.5 Manrope,system-ui,sans-serif;text-align:center;padding:10px 16px;border-bottom:1px solid #E9D49A">Demostración con datos de ejemplo (no se guarda nada) · <a href="index.html" style="color:#6B4A00">Ver como cliente</a> · <a href="estudio-ingresar.html" style="color:#6B4A00">Ver como estudio</a> · <a href="../" style="color:#6B4A00">Volver a la web</a></div>
+  
+<div class="panel">
+  <nav class="panel-menu" aria-label="Menú del panel">
+    <div class="panel-marca">
+      
+  
+  <img class="logo-img" src="static/marca/cff/logo-box-claro.svg" width="40" height="40" alt="">
+  
+
+      <div class="panel-marca-nombre">Estudio CFF</div>
+    </div>
+    
+    <a href="estudio.html" >Clientes</a>
+    
+    <a href="estudio-facturas.html" aria-current="page">Facturas a revisar</a>
+    <a href="estudio-vencimientos.html" >Vencimientos y pagos</a>
+    <a href="estudio-escalas.html" >Escalas del monotributo</a>
+    <a class="pendiente" aria-disabled="true">Configuración</a>
+
+    <div class="panel-usuario">
+      <div>Personal del estudio</div>
+      <form action="estudio-ingresar.html" method="get"><button type="submit">Salir</button></form>
+    </div>
+  </nav>
+
+  <main class="panel-cuerpo">
+    
+    
+  <div>
+    <h1>Facturas que subieron los clientes</h1>
+    <div class="panel-bajada">Las que se leyeron solas ya están cargadas. Las que no, hay que completarlas a mano.</div>
+  </div>
+
+  <nav class="pestanias" aria-label="Qué mostrar">
+    <a href="estudio-facturas.html" >A revisar</a>
+    <a href="estudio-facturas-ver-todas.html" aria-current="page">Todas (últimos 60 días)</a>
+  </nav>
+
+  <div class="caja-tabla">
+    <table class="tabla">
+      <thead><tr><th>Cliente</th><th>Subida</th><th>Qué es</th><th>Comprobante</th><th>Total</th><th>Estado</th><th><span class="oculto">Acción</span></th></tr></thead>
+      <tbody>
+        
+          
+          <tr>
+            <td><a class="tabla-nombre" href="estudio-clientes-3.html">Kiosco La Esquina (ejemplo)</a></td>
+            <td>19/10/2026 21:43</td>
+            <td>—</td>
+            <td>—</td>
+            <td>—</td>
+            <td>
+              <span class="etiqueta etiqueta-amarillo">A revisar</span><div class="tabla-cuit">No se pudo leer el total con seguridad.</div>
+            </td>
+            <td><a href="estudio-facturas-2.html">Completar</a></td>
+          </tr>
+        
+          
+          <tr>
+            <td><a class="tabla-nombre" href="estudio-clientes-3.html">Kiosco La Esquina (ejemplo)</a></td>
+            <td>19/10/2026 21:43</td>
+            <td>Compra</td>
+            <td>C 0003-00001520</td>
+            <td>$ 185.400,00</td>
+            <td>
+              <span class="etiqueta etiqueta-verde">Leída del QR</span>
+              
+            </td>
+            <td><a href="estudio-facturas-1.html">Ver</a></td>
+          </tr>
+        
+      </tbody>
+    </table>
+  </div>
+
+  </main>
+</div>
+
+  <script src="static/formularios.js?v=1792457014" defer></script>
+</body>
+</html>

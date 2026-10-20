@@ -1,0 +1,149 @@
+
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <meta name="theme-color" content="#1E2847">
+  <link rel="icon" type="image/svg+xml" href="static/marca/cff/logo-box.svg">
+  <link rel="apple-touch-icon" href="static/marca/cff/icono-apple-180.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="CFF">
+  <title>Monotributo de septiembre · Ferretería Los Médanos (ejemplo)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="static/estilos.css?v=1792457014">
+  <style>:root { --azul: #1E2847; }</style>
+</head>
+<body><div style="background:#FFF4D6;color:#6B4A00;font:700 15px/1.5 Manrope,system-ui,sans-serif;text-align:center;padding:10px 16px;border-bottom:1px solid #E9D49A">Demostración con datos de ejemplo (no se guarda nada) · <a href="index.html" style="color:#6B4A00">Ver como cliente</a> · <a href="estudio-ingresar.html" style="color:#6B4A00">Ver como estudio</a> · <a href="../" style="color:#6B4A00">Volver a la web</a></div>
+  
+<div class="panel">
+  <nav class="panel-menu" aria-label="Menú del panel">
+    <div class="panel-marca">
+      
+  
+  <img class="logo-img" src="static/marca/cff/logo-box-claro.svg" width="40" height="40" alt="">
+  
+
+      <div class="panel-marca-nombre">Estudio CFF</div>
+    </div>
+    
+    <a href="estudio.html" >Clientes</a>
+    
+    <a href="estudio-facturas.html" >Facturas a revisar</a>
+    <a href="estudio-vencimientos.html" aria-current="page">Vencimientos y pagos</a>
+    <a href="estudio-escalas.html" >Escalas del monotributo</a>
+    <a class="pendiente" aria-disabled="true">Configuración</a>
+
+    <div class="panel-usuario">
+      <div>Personal del estudio</div>
+      <form action="estudio-ingresar.html" method="get"><button type="submit">Salir</button></form>
+    </div>
+  </nav>
+
+  <main class="panel-cuerpo">
+    
+    
+  <div class="panel-encabezado">
+    <div>
+      <a class="volver" href="estudio-clientes-1.html">← Ferretería Los Médanos (ejemplo)</a>
+      <h1>Monotributo de septiembre 
+  <span class="etiqueta etiqueta-azul">Pagado</span>
+  
+</h1>
+      <div class="panel-bajada">$ 82.564,81 · vence el 20/09/2026
+         · pagado el 24/09/2026 21:43</div>
+    </div>
+    <div class="botonera">
+      
+        <form action="estudio-vencimientos-4.html" method="get">
+          <button class="boton-panel boton-secundario" type="submit">Volver a pendiente</button>
+        </form>
+      
+    </div>
+  </div>
+
+  <section class="tarjeta-panel" aria-labelledby="titulo-vep">
+    <h2 id="titulo-vep">El pago para el cliente (VEP)</h2>
+    
+      <p class="panel-bajada">Todavía no está. Subí el PDF que bajaste de ARCA, o escribí el número del VEP.</p>
+    
+
+    
+    <form class="fila-clave" action="estudio-vencimientos-4.html" method="get">
+      <div class="campo-panel">
+        <label for="archivo">PDF del VEP</label>
+        <input id="archivo" type="file" accept="application/pdf,.pdf" class="campo-archivo">
+      </div>
+      <div class="campo-panel campo-angosto">
+        <label for="numero">o número del VEP</label>
+        <input id="numero" inputmode="numeric" value="">
+      </div>
+      <button class="boton-panel" type="submit">Guardar el pago</button>
+    </form>
+  </section>
+
+  <section class="tarjeta-panel" aria-labelledby="titulo-avisos">
+    <h2 id="titulo-avisos">Avisos al cliente</h2>
+    
+      <p class="panel-bajada">Todavía no se mandó ningún aviso de este pago. Sale apenas subís el VEP, y después 2 días antes, 1 día antes, el día y el día después (a las 11 h), mientras siga sin pagar.</p>
+    
+  </section>
+
+  <section class="tarjeta-panel" aria-labelledby="titulo-editar">
+    <h2 id="titulo-editar">Datos del vencimiento</h2>
+    
+    <form class="formulario-panel" action="estudio-vencimientos-4.html" method="get">
+      
+  <div class="fila-campos">
+    <div class="campo-panel">
+      <label for="tipo">Qué es</label>
+      <select id="tipo" >
+        <option value="">Elegí…</option>
+        <option value="monotributo" selected>Monotributo</option><option value="ingresos_brutos" >Ingresos Brutos (ARBA)</option><option value="convenio_multilateral" >Convenio Multilateral</option><option value="iva" >IVA</option><option value="ganancias" >Ganancias</option><option value="tasa_municipal" >Tasa municipal</option><option value="otro" >Otro</option>
+      </select>
+      
+  
+
+    </div>
+    <div class="campo-panel">
+      <label for="vencimiento">Vence el</label>
+      <input id="vencimiento" type="date" value="2026-09-20" >
+      
+  
+
+    </div>
+  </div>
+  <div class="fila-campos">
+    <div class="campo-panel">
+      <label for="descripcion">Cómo lo ve el cliente</label>
+      <input id="descripcion" value="Monotributo de septiembre" maxlength="160"
+             placeholder="Ingresos Brutos de octubre" aria-describedby="ayuda-descripcion" >
+      <div class="ayuda-panel" id="ayuda-descripcion">Si lo dejás vacío, se arma solo: "Ingresos Brutos de octubre".</div>
+      
+  
+
+    </div>
+    <div class="campo-panel">
+      <label for="monto">Monto (opcional)</label>
+      <input id="monto" value="82564,81" inputmode="decimal" placeholder="49.527,18" >
+      
+  
+
+    </div>
+  </div>
+
+      <div class="acciones-form"><button class="boton-panel" type="submit">Guardar cambios</button></div>
+    </form>
+  </section>
+
+  
+
+  </main>
+</div>
+
+  <script src="static/formularios.js?v=1792457014" defer></script>
+</body>
+</html>

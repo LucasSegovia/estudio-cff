@@ -1,0 +1,129 @@
+
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <meta name="theme-color" content="#1E2847">
+  <link rel="icon" type="image/svg+xml" href="static/marca/cff/logo-box.svg">
+  <link rel="apple-touch-icon" href="static/marca/cff/icono-apple-180.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="CFF">
+  <title>Factura de Kiosco La Esquina (ejemplo) · Estudio CFF</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="static/estilos.css?v=1792457014">
+  <style>:root { --azul: #1E2847; }</style>
+</head>
+<body><div style="background:#FFF4D6;color:#6B4A00;font:700 15px/1.5 Manrope,system-ui,sans-serif;text-align:center;padding:10px 16px;border-bottom:1px solid #E9D49A">Demostración con datos de ejemplo (no se guarda nada) · <a href="index.html" style="color:#6B4A00">Ver como cliente</a> · <a href="estudio-ingresar.html" style="color:#6B4A00">Ver como estudio</a> · <a href="../" style="color:#6B4A00">Volver a la web</a></div>
+  
+<div class="panel">
+  <nav class="panel-menu" aria-label="Menú del panel">
+    <div class="panel-marca">
+      
+  
+  <img class="logo-img" src="static/marca/cff/logo-box-claro.svg" width="40" height="40" alt="">
+  
+
+      <div class="panel-marca-nombre">Estudio CFF</div>
+    </div>
+    
+    <a href="estudio.html" >Clientes</a>
+    
+    <a href="estudio-facturas.html" aria-current="page">Facturas a revisar</a>
+    <a href="estudio-vencimientos.html" >Vencimientos y pagos</a>
+    <a href="estudio-escalas.html" >Escalas del monotributo</a>
+    <a class="pendiente" aria-disabled="true">Configuración</a>
+
+    <div class="panel-usuario">
+      <div>Personal del estudio</div>
+      <form action="estudio-ingresar.html" method="get"><button type="submit">Salir</button></form>
+    </div>
+  </nav>
+
+  <main class="panel-cuerpo">
+    
+    
+  <div>
+    <a class="volver" href="estudio-facturas.html">← Facturas</a>
+    <h1>Factura de Kiosco La Esquina (ejemplo)
+      <span class="etiqueta etiqueta-amarillo">A revisar</span></h1>
+    <div class="panel-bajada">Subida el 19/10/2026 21:43 · No se pudo leer el total con seguridad.</div>
+  </div>
+
+  <div class="revision">
+    <div class="revision-foto">
+      
+        <a href="archivos/estudio-facturas-2-archivo.jpg" target="_blank" rel="noopener" title="Abrir en grande">
+          <img src="archivos/estudio-facturas-2-archivo.jpg" alt="Foto que subió el cliente">
+        </a>
+        <div class="nota">Tocá la foto para verla en grande.</div>
+      
+    </div>
+
+    <form class="tarjeta-panel formulario-panel" action="estudio-facturas-2.html" method="get">
+      
+
+      <fieldset class="campo-panel">
+        <legend>¿Qué es?</legend>
+        <div class="opciones">
+          <label class="opcion"><input type="radio" value="compra" > Una compra (la emitió otro)</label>
+          <label class="opcion"><input type="radio" value="venta" > Una venta del cliente</label>
+        </div>
+        <div class="ayuda-panel">Si es una venta (por ejemplo, un ticket de su controlador fiscal), se suma a su facturación y al semáforo.</div>
+      </fieldset>
+
+      <div class="fila-campos">
+        <div class="campo-panel">
+          <label for="cuit_emisor">CUIT de quien la emitió</label>
+          <input id="cuit_emisor" value="" inputmode="numeric" data-cuit>
+          <div class="ayuda-panel">Si es una venta, es el CUIT del cliente (20-33333333-4).</div>
+        </div>
+        <div class="campo-panel">
+          <label for="tipo">Tipo</label>
+          <select id="tipo">
+            <option value="">Elegí…</option>
+            <option value="1" >Factura A</option><option value="2" >Nota de Débito A</option><option value="3" >Nota de Crédito A</option><option value="6" >Factura B</option><option value="7" >Nota de Débito B</option><option value="8" >Nota de Crédito B</option><option value="11" >Factura C</option><option value="12" >Nota de Débito C</option><option value="13" >Nota de Crédito C</option><option value="51" >Factura M</option><option value="52" >Nota de Débito M</option><option value="53" >Nota de Crédito M</option><option value="81" >Tique Factura A</option><option value="82" >Tique Factura B</option><option value="83" >Tique</option><option value="111" >Tique Factura C</option>
+          </select>
+        </div>
+      </div>
+      <div class="fila-campos">
+        <div class="campo-panel">
+          <label for="punto_venta">Punto de venta</label>
+          <input id="punto_venta" value="" inputmode="numeric">
+        </div>
+        <div class="campo-panel">
+          <label for="numero">Número</label>
+          <input id="numero" value="" inputmode="numeric">
+        </div>
+      </div>
+      <div class="fila-campos">
+        <div class="campo-panel">
+          <label for="fecha">Fecha</label>
+          <input id="fecha" type="date" value="">
+        </div>
+        <div class="campo-panel">
+          <label for="total">Total</label>
+          <input id="total" value="" inputmode="decimal" placeholder="12.500,00">
+        </div>
+      </div>
+      <div class="campo-panel campo-angosto">
+        <label for="cae">CAE (opcional)</label>
+        <input id="cae" value="" inputmode="numeric">
+      </div>
+
+      <div class="acciones-form">
+        <button class="boton-panel" type="submit">Guardar como revisada</button>
+        <a href="estudio-facturas.html">Cancelar</a>
+      </div>
+    </form>
+  </div>
+
+  </main>
+</div>
+
+  <script src="static/formularios.js?v=1792457014" defer></script>
+</body>
+</html>

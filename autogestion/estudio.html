@@ -1,0 +1,179 @@
+
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <meta name="theme-color" content="#1E2847">
+  <link rel="icon" type="image/svg+xml" href="static/marca/cff/logo-box.svg">
+  <link rel="apple-touch-icon" href="static/marca/cff/icono-apple-180.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="CFF">
+  <title>Clientes · Estudio CFF</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="static/estilos.css?v=1792457014">
+  <style>:root { --azul: #1E2847; }</style>
+</head>
+<body><div style="background:#FFF4D6;color:#6B4A00;font:700 15px/1.5 Manrope,system-ui,sans-serif;text-align:center;padding:10px 16px;border-bottom:1px solid #E9D49A">Demostración con datos de ejemplo (no se guarda nada) · <a href="index.html" style="color:#6B4A00">Ver como cliente</a> · <a href="estudio-ingresar.html" style="color:#6B4A00">Ver como estudio</a> · <a href="../" style="color:#6B4A00">Volver a la web</a></div>
+  
+<div class="panel">
+  <nav class="panel-menu" aria-label="Menú del panel">
+    <div class="panel-marca">
+      
+  
+  <img class="logo-img" src="static/marca/cff/logo-box-claro.svg" width="40" height="40" alt="">
+  
+
+      <div class="panel-marca-nombre">Estudio CFF</div>
+    </div>
+    
+    <a href="estudio.html" aria-current="page">Clientes</a>
+    
+    <a href="estudio-facturas.html" >Facturas a revisar</a>
+    <a href="estudio-vencimientos.html" >Vencimientos y pagos</a>
+    <a href="estudio-escalas.html" >Escalas del monotributo</a>
+    <a class="pendiente" aria-disabled="true">Configuración</a>
+
+    <div class="panel-usuario">
+      <div>Personal del estudio</div>
+      <form action="estudio-ingresar.html" method="get"><button type="submit">Salir</button></form>
+    </div>
+  </nav>
+
+  <main class="panel-cuerpo">
+    
+    
+  <div class="panel-encabezado">
+    <div>
+      <h1>Clientes</h1>
+      <div class="panel-bajada">Ordenados por riesgo de pasarse de categoría</div>
+    </div>
+    <a class="boton-panel" href="estudio-clientes-nuevo.html">+ Nuevo cliente</a>
+  </div>
+
+  <div class="resumen">
+    <div class="resumen-caja resumen-alerta">
+      <div class="resumen-nombre">No vio el aviso (48 h)</div>
+      <div class="resumen-numero texto-rojo">1</div>
+    </div>
+    <div class="resumen-caja">
+      <div class="resumen-nombre">En rojo</div>
+      <div class="resumen-numero texto-rojo">1</div>
+    </div>
+    <div class="resumen-caja">
+      <div class="resumen-nombre">En amarillo</div>
+      <div class="resumen-numero texto-amarillo">1</div>
+    </div>
+    <div class="resumen-caja">
+      <div class="resumen-nombre">Facturas a revisar</div>
+      <div class="resumen-numero">1</div>
+    </div>
+    <div class="resumen-caja">
+      <div class="resumen-nombre">Sin facturación cargada</div>
+      <div class="resumen-numero">0</div>
+    </div>
+  </div>
+
+  <div class="caja-tabla">
+    <table class="tabla tabla-clientes">
+      <thead>
+        <tr><th>Cliente</th><th>Categoría</th><th class="col-uso">Uso del tope (y a este ritmo)</th><th>A revisar</th><th>Sin pagar</th><th>Avisos</th><th>Acción</th></tr>
+      </thead>
+      <tbody>
+        
+          
+          
+          <tr>
+            <td>
+              <a class="tabla-nombre" href="estudio-clientes-3.html">Kiosco La Esquina (ejemplo)</a>
+              <div class="tabla-cuit">20-33333333-4</div>
+            </td>
+            <td>A</td>
+            <td>
+              
+                <div class="uso">
+                  <div class="uso-barra"><div class="uso-relleno uso-rojo" style="width: 83.4%"></div></div>
+                  <div class="uso-numero texto-rojo">83%</div>
+                </div>
+                <div class="uso-proyeccion">→ 102 % en diciembre</div>
+              
+            </td>
+            <td>1</td>
+            <td>1</td>
+            <td><span class="etiqueta etiqueta-rojo sin-cortar">No lo vio (72 h)</span></td>
+            <td>
+              
+                <a class="boton-tabla" href="https://wa.me/?text=%C2%A1Hola%2C%20Ra%C3%BAl%21%20Te%20escribimos%20de%20Estudio%20CFF.%20Te%20mandamos%20un%20aviso%3A%20%22Ten%C3%A9s%20un%20pago%20listo%22.%20%C2%BFLo%20pudiste%20ver%3F" target="_blank" rel="noopener">Avisar por WhatsApp</a>
+              
+            </td>
+          </tr>
+        
+          
+          
+          <tr>
+            <td>
+              <a class="tabla-nombre" href="estudio-clientes-2.html">Peluquería Marina (ejemplo)</a>
+              <div class="tabla-cuit">27-22222222-8</div>
+            </td>
+            <td>C</td>
+            <td>
+              
+                <div class="uso">
+                  <div class="uso-barra"><div class="uso-relleno uso-amarillo" style="width: 64.5%"></div></div>
+                  <div class="uso-numero texto-amarillo">64%</div>
+                </div>
+                <div class="uso-proyeccion">→ 79 % en diciembre</div>
+              
+            </td>
+            <td>—</td>
+            <td>1</td>
+            <td><span class="etiqueta etiqueta-rojo sin-cortar">Sin celular ni mail</span></td>
+            <td>
+              
+                <a class="boton-tabla" href="https://wa.me/?text=%C2%A1Hola%2C%20Marina%21%20Te%20escribimos%20de%20Estudio%20CFF.%20Desde%20enero%20ya%20facturaste%20el%2064%20%25%20del%20tope%20de%20tu%20categor%C3%ADa%20del%20monotributo%2C%20y%20a%20este%20ritmo%20en%20diciembre%20llegar%C3%ADas%20al%2079%20%25.%20%C2%BFPodemos%20hablar%20para%20ver%20c%C3%B3mo%20seguir%3F" target="_blank" rel="noopener">Avisar por WhatsApp</a>
+              
+            </td>
+          </tr>
+        
+          
+          
+          <tr>
+            <td>
+              <a class="tabla-nombre" href="estudio-clientes-1.html">Ferretería Los Médanos (ejemplo)</a>
+              <div class="tabla-cuit">20-11111111-2</div>
+            </td>
+            <td>D</td>
+            <td>
+              
+                <div class="uso">
+                  <div class="uso-barra"><div class="uso-relleno uso-verde" style="width: 37.1%"></div></div>
+                  <div class="uso-numero texto-verde">37%</div>
+                </div>
+                <div class="uso-proyeccion">→ 45 % en diciembre</div>
+              
+            </td>
+            <td>—</td>
+            <td>1</td>
+            <td><span class="etiqueta etiqueta-rojo sin-cortar">Sin celular ni mail</span></td>
+            <td>
+              
+                <a href="estudio-clientes-1.html">Ver ficha</a>
+              
+            </td>
+          </tr>
+        
+        
+      </tbody>
+    </table>
+  </div>
+  <div class="nota">El botón de WhatsApp abre el chat del cliente con el mensaje ya escrito. El uso cuenta como ARCA: desde el inicio del período de la próxima recategorización. El color sale de la proyección al cierre: amarillo desde 70 %, rojo desde 90 %.</div>
+
+  </main>
+</div>
+
+  <script src="static/formularios.js?v=1792457014" defer></script>
+</body>
+</html>

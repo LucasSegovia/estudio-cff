@@ -1,0 +1,218 @@
+
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <meta name="theme-color" content="#1E2847">
+  <link rel="icon" type="image/svg+xml" href="static/marca/cff/logo-box.svg">
+  <link rel="apple-touch-icon" href="static/marca/cff/icono-apple-180.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="CFF">
+  <title>Peluquería Marina (ejemplo) · Estudio CFF</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="static/estilos.css?v=1792457014">
+  <style>:root { --azul: #1E2847; }</style>
+</head>
+<body><div style="background:#FFF4D6;color:#6B4A00;font:700 15px/1.5 Manrope,system-ui,sans-serif;text-align:center;padding:10px 16px;border-bottom:1px solid #E9D49A">Demostración con datos de ejemplo (no se guarda nada) · <a href="index.html" style="color:#6B4A00">Ver como cliente</a> · <a href="estudio-ingresar.html" style="color:#6B4A00">Ver como estudio</a> · <a href="../" style="color:#6B4A00">Volver a la web</a></div>
+  
+<div class="panel">
+  <nav class="panel-menu" aria-label="Menú del panel">
+    <div class="panel-marca">
+      
+  
+  <img class="logo-img" src="static/marca/cff/logo-box-claro.svg" width="40" height="40" alt="">
+  
+
+      <div class="panel-marca-nombre">Estudio CFF</div>
+    </div>
+    
+    <a href="estudio.html" aria-current="page">Clientes</a>
+    
+    <a href="estudio-facturas.html" >Facturas a revisar</a>
+    <a href="estudio-vencimientos.html" >Vencimientos y pagos</a>
+    <a href="estudio-escalas.html" >Escalas del monotributo</a>
+    <a class="pendiente" aria-disabled="true">Configuración</a>
+
+    <div class="panel-usuario">
+      <div>Personal del estudio</div>
+      <form action="estudio-ingresar.html" method="get"><button type="submit">Salir</button></form>
+    </div>
+  </nav>
+
+  <main class="panel-cuerpo">
+    
+    
+  <div class="panel-encabezado">
+    <div>
+      <a class="volver" href="estudio.html">← Clientes</a>
+      <h1>Peluquería Marina (ejemplo)
+        </h1>
+      <div class="panel-bajada">CUIT 27-22222222-8</div>
+    </div>
+    <div class="botonera">
+      
+        <a class="boton-panel boton-secundario" href="https://wa.me/" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+      
+      <a class="boton-panel" href="estudio-clientes-2-editar.html">Editar datos</a>
+    </div>
+  </div>
+
+  <section class="tarjeta-panel" aria-labelledby="titulo-datos">
+    <h2 id="titulo-datos">Datos</h2>
+    <dl class="datos">
+      <dt>Titular</dt><dd>Marina</dd>
+      <dt>Categoría</dt><dd>C</dd>
+      <dt>Vende</dt><dd>Servicios</dd>
+      <dt>Celular</dt><dd>2257000002</dd>
+      <dt>Mail</dt><dd>—</dd>
+      <dt>Último ingreso</dt><dd>—</dd>
+    </dl>
+  </section>
+
+  <section class="tarjeta-panel" aria-labelledby="titulo-facturacion">
+    <h2 id="titulo-facturacion">Facturación y semáforo</h2>
+    
+      <div class="uso uso-ficha">
+        <div class="uso-barra"><div class="uso-relleno uso-amarillo" style="width: 64.5%"></div></div>
+        <div class="uso-numero texto-amarillo">64%</div>
+      </div>
+      <p class="panel-bajada">Desde el 01/01/2026 facturó $ 15.916.000,00, de un tope de $ 24.670.494,31 (categoría C). A este ritmo, al 31/12/2026 llega al <strong class="texto-amarillo">79 %</strong>.</p>
+    
+    
+      <p class="panel-bajada">25 comprobantes cargados, del 05/10/2025 al 25/09/2026.</p>
+    
+
+    
+    <form class="fila-clave" action="estudio-clientes-2.html" method="get">
+      <div class="campo-panel">
+        <label for="archivo-facturacion">Archivo de Mis Comprobantes (emitidos)</label>
+        <input id="archivo-facturacion" type="file" accept=".csv,.zip,.xlsx,.txt" class="campo-archivo">
+        <div class="ayuda-panel">El CSV, ZIP o Excel que se baja de ARCA (o el que exporta Aconpy). Si subís uno que ya estaba, no se duplica nada.</div>
+      </div>
+      <button class="boton-panel" type="submit">Cargar facturación</button>
+    </form>
+  </section>
+
+  <section class="tarjeta-panel" aria-labelledby="titulo-pagos">
+    <h2 id="titulo-pagos">Pagos y vencimientos</h2>
+    
+      <div class="caja-tabla caja-sin-borde">
+        <table class="tabla">
+          <thead><tr><th>Qué</th><th>Monto</th><th>Vence</th><th>Pago</th><th>Estado</th><th><span class="oculto">Acción</span></th></tr></thead>
+          <tbody>
+            
+              <tr>
+                <td>Monotributo de octubre</td>
+                <td>$ 66.020,12</td>
+                <td>20/10/2026</td>
+                <td>
+  <span class="etiqueta etiqueta-gris">Falta el VEP</span>
+  
+</td>
+                <td>
+  <span class="etiqueta etiqueta-rojo">Vence mañana</span>
+</td>
+                <td><a href="estudio-vencimientos-2.html">Subir VEP</a></td>
+              </tr>
+            
+          </tbody>
+        </table>
+      </div>
+    
+
+    <details class="desplegable" >
+      <summary>+ Cargar otro vencimiento</summary>
+      
+      <form class="formulario-panel" action="estudio-clientes-2.html" method="get">
+        
+  <div class="fila-campos">
+    <div class="campo-panel">
+      <label for="tipo">Qué es</label>
+      <select id="tipo" >
+        <option value="">Elegí…</option>
+        <option value="monotributo" >Monotributo</option><option value="ingresos_brutos" >Ingresos Brutos (ARBA)</option><option value="convenio_multilateral" >Convenio Multilateral</option><option value="iva" >IVA</option><option value="ganancias" >Ganancias</option><option value="tasa_municipal" >Tasa municipal</option><option value="otro" >Otro</option>
+      </select>
+      
+  
+
+    </div>
+    <div class="campo-panel">
+      <label for="vencimiento">Vence el</label>
+      <input id="vencimiento" type="date" value="2026-10-20" >
+      
+  
+
+    </div>
+  </div>
+  <div class="fila-campos">
+    <div class="campo-panel">
+      <label for="descripcion">Cómo lo ve el cliente</label>
+      <input id="descripcion" value="" maxlength="160"
+             placeholder="Ingresos Brutos de octubre" aria-describedby="ayuda-descripcion" >
+      <div class="ayuda-panel" id="ayuda-descripcion">Si lo dejás vacío, se arma solo: "Ingresos Brutos de octubre".</div>
+      
+  
+
+    </div>
+    <div class="campo-panel">
+      <label for="monto">Monto (opcional)</label>
+      <input id="monto" value="" inputmode="decimal" placeholder="49.527,18" >
+      
+  
+
+    </div>
+  </div>
+
+        <div class="acciones-form"><button class="boton-panel" type="submit">Cargar vencimiento</button></div>
+      </form>
+    </details>
+  </section>
+
+  <section class="tarjeta-panel" aria-labelledby="titulo-avisos-cliente">
+    <h2 id="titulo-avisos-cliente">Avisos</h2>
+    <dl class="datos">
+      <dt>En el celular</dt>
+      <dd><span class="etiqueta etiqueta-amarillo">No los activó</span></dd>
+      <dt>Por mail</dt><dd>Sin mail cargado</dd>
+    </dl>
+    <p class="panel-bajada">Para activarlos, el cliente entra al portal desde su celular y toca "Recibir avisos en este celular".</p>
+    <form action="estudio-clientes-2.html" method="get">
+      <button class="boton-panel boton-secundario" type="submit">Mandar un aviso de prueba</button>
+    </form>
+  </section>
+
+  <section class="tarjeta-panel" aria-labelledby="titulo-clave">
+    <h2 id="titulo-clave">Contraseña</h2>
+    <p class="panel-bajada">Si el cliente se la olvidó, poné una nueva. La anterior deja de funcionar y se cierra la sesión en su celular.</p>
+    <form class="fila-clave" action="estudio-clientes-2.html" method="get">
+      <div class="campo-panel campo-angosto">
+        <label for="clave">Contraseña nueva</label>
+        <input id="clave" type="text" autocomplete="new-password" minlength="8"
+               >
+        
+      </div>
+      <button class="boton-panel" type="submit">Cambiar contraseña</button>
+    </form>
+  </section>
+
+  <section class="tarjeta-panel" aria-labelledby="titulo-baja">
+    
+      <h2 id="titulo-baja">Dar de baja</h2>
+      <p class="panel-bajada">El cliente deja de poder entrar. No se borra nada: su historial queda guardado y se puede reactivar.</p>
+      <form
+            onsubmit="return confirm('¿Dar de baja a Peluquería Marina (ejemplo)? Va a dejar de poder entrar.')" action="estudio-clientes-2.html" method="get">
+        <button class="boton-panel boton-peligro" type="submit">Dar de baja</button>
+      </form>
+    
+  </section>
+
+  </main>
+</div>
+
+  <script src="static/formularios.js?v=1792457014" defer></script>
+</body>
+</html>

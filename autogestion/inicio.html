@@ -13,10 +13,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="static/estilos.css?v=1792167796">
+  <link rel="stylesheet" href="static/estilos.css?v=1792457014">
   <style>:root { --azul: #1E2847; }</style>
 </head>
-<body><div style="background:#FFF4D6;color:#6B4A00;font:700 15px/1.4 Manrope,system-ui,sans-serif;text-align:center;padding:10px 16px;border-bottom:1px solid #E9D49A">Demostración con datos de ejemplo · <a href="../" style="color:#6B4A00">Volver a la web</a></div>
+<body><div style="background:#FFF4D6;color:#6B4A00;font:700 15px/1.5 Manrope,system-ui,sans-serif;text-align:center;padding:10px 16px;border-bottom:1px solid #E9D49A">Demostración con datos de ejemplo (no se guarda nada) · <a href="index.html" style="color:#6B4A00">Ver como cliente</a> · <a href="estudio-ingresar.html" style="color:#6B4A00">Ver como estudio</a> · <a href="../" style="color:#6B4A00">Volver a la web</a></div>
   
 <main class="pantalla">
   <div class="saludo">
@@ -47,36 +47,43 @@
     
       
       <svg class="velocimetro" viewBox="0 0 300 172" width="300" height="172" role="img"
-           aria-label="Usaste el 72 por ciento del tope de tu categoría">
+           aria-label="Usaste el 83 por ciento del tope de tu categoría">
         <path d="M30 150 A120 120 0 0 1 270 150" fill="none" stroke="#E4EAEF" stroke-width="26" stroke-linecap="round"></path>
         
-          <path d="M30 150 A120 120 0 0 1 226.5 57.5" fill="none" stroke="#C2412D" stroke-width="26" stroke-linecap="round"></path>
+          
+          <path d="M30 150 A120 120 0 0 1 270.0 150.0" fill="none" stroke="#C2412D" stroke-opacity=".3" stroke-width="26" stroke-linecap="round"></path>
+        
+        
+          <path d="M30 150 A120 120 0 0 1 254.0 90.2" fill="none" stroke="#C2412D" stroke-width="26" stroke-linecap="round"></path>
         
         
           <line x1="212.3" y1="64.2" x2="228.8" y2="41.6" stroke="#6B7A88" stroke-width="2"></line>
         
           <line x1="250.8" y1="117.2" x2="277.4" y2="108.6" stroke="#6B7A88" stroke-width="2"></line>
         
-        <text x="150" y="128" text-anchor="middle" font-size="52" font-weight="800" fill="#10202F" font-family="Manrope, system-ui, sans-serif">72%</text>
+        <text x="150" y="128" text-anchor="middle" font-size="52" font-weight="800" fill="#10202F" font-family="Manrope, system-ui, sans-serif">83%</text>
         <text x="150" y="156" text-anchor="middle" font-size="15" fill="#4A5A69" font-family="Manrope, system-ui, sans-serif">del tope de tu categoría</text>
       </svg>
 
       <div class="estado-semaforo estado-rojo">
         <span class="punto-semaforo" aria-hidden="true"></span>
-        Cuidado: estás cerca del tope
+        Cuidado: a este ritmo te pasás del tope
         
       </div>
 
       
-      <p class="texto-centro">Desde enero facturaste <b>$ 8.645.000,00</b>.
-        Te faltan <b>$ 3.364.410,45</b> para el tope.</p>
+      <p class="texto-centro">Desde enero facturaste <b>$ 10.010.000,00</b>.
+        Te faltan <b>$ 1.999.410,45</b> para el tope.</p>
       <p class="texto-centro ayuda-grande">
-        A este ritmo, en diciembre vas a llegar al 90 % del tope.
+        Si seguís así, llegás al tope en diciembre (la parte clara).
+        
         Es lo que mira ARCA para recategorizarte en enero.
       </p>
     
   </section>
 
+  
+    
   
 
   <nav class="accesos" aria-label="Qué querés hacer">
@@ -91,17 +98,17 @@
     <a class="acceso" href="pagos.html">
       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M3 10h18"></path><path d="M8 3v4"></path><path d="M16 3v4"></path></svg>
       <span class="acceso-texto">Lo que tengo que pagar</span>
-      <span class="contador" aria-label="3 sin pagar">3</span>
+      <span class="contador" aria-label="1 sin pagar">1</span>
     </a>
   </nav>
 
   
 
-  <form class="pie" method="get" action="index.html">
+  <form class="pie" action="index.html" method="get">
     <button class="boton-salir" type="submit">Salir</button>
   </form>
 </main>
 
-  <script src="static/formularios.js?v=1792167796" defer></script>
+  <script src="static/formularios.js?v=1792457014" defer></script>
 </body>
 </html>
